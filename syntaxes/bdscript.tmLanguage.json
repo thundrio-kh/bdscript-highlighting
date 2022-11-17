@@ -1,0 +1,87 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Bdscript",
+	"patterns": [
+		{
+			"include": "#pushes"
+		},
+		{
+			"include": "#pops"
+		},
+		{
+			"include": "#comparisons"
+		},
+		{
+			"include": "#math"
+		},
+		{
+			"include": "#controlflow"
+		},
+		{
+			"include": "#syscall"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#funnames"
+		}
+
+	],
+	"repository": {
+		"funnames": {
+			"patterns": [{
+				"name": "entity.name.class",
+				"match": "\\b(.*:)\\b"
+			}]
+		},
+		"controlflow": {
+			"patterns": [{
+				"name": "keyword.control",
+				"match": "\\b(jmp|jnz|jz|gosub|halt|exit|ret|gosub32)\\b"
+			}]
+		},
+		"pushes": {
+			"patterns": [{
+				"name": "variable.other",
+				"match": "\\b(pushImm|pushFromPSp|pushFromPWp|pushFromPSpVal|pushFromPAi|pushFromFSp|pushFromFWp|pushFromFSpVal|pushFromFAi|popToSp|popToWp|popToSpVal|popToAi|memcpyToSp|memcpyToWp|memcpyToSpVal|memcpyToSpAi)\\b"
+			}]
+		},
+		"comparisons": {
+			"patterns": [{
+				"name": "keyword.operator",
+				"match": "\\b(fetchValue|memcpy|cfti|neg|inv|eqz|abs|msb|info|eqz|neqz|msbi|ipos|citf|negf|absf|infzf|infoezf|eqzf|neqzf|supoezf|supzf|add|sub|mul|div|mod|and|or|xor|sll|sra|eqzv|neqzv|addf|subf|mulf|divf|modf|drop|dup|sin|cos|degr|radd)\\b"
+			}]
+		},
+		"syscall": {
+			"patterns": [{
+				"name": "entity.name.function",
+				"match": "\\b(syscall)\\b"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "keyword.control",
+				"match": "\\b(;.*)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.single.bdscript",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.bdscript",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.bdscript"
+}

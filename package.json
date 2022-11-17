@@ -1,0 +1,25 @@
+{
+  "name": "bdscript",
+  "displayName": "Bdscript Syntax",
+  "description": "editor support for bdscript decompiled kh2 bdx ai scripts",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.73.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "bdscript",
+      "aliases": ["Bdscript", "bdscript"],
+      "extensions": [".bdscript"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "bdscript",
+      "scopeName": "source.bdscript",
+      "path": "./syntaxes/bdscript.tmLanguage.json"
+    }]
+  }
+}
