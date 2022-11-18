@@ -38,7 +38,7 @@
 		"funnames": {
 			"patterns": [{
 				"name": "entity.name.class",
-				"match": "\\b(.*:)\\b"
+				"match": "(.*:)"
 			}]
 		},
 		"controlflow": {
@@ -50,7 +50,7 @@
 		"pushes": {
 			"patterns": [{
 				"name": "variable.other",
-				"match": "\\b(pushImm|pushFromPSp|pushFromPWp|pushFromPSpVal|pushFromPAi|pushFromFSp|pushFromFWp|pushFromFSpVal|pushFromFAi|popToSp|popToWp|popToSpVal|popToAi|memcpyToSp|memcpyToWp|memcpyToSpVal|memcpyToSpAi)\\b"
+				"match": "\\b(pushImm|pushFromPSp|pushFromPWp|pushFromPSpVal|pushFromPAi|pushFromFSp|pushFromFWp|pushFromFSpVal|pushFromFAi|popToSp|popToWp|popToSpVal|popToAi|memcpyToSp|memcpyToWp|memcpyToSpVal|memcpyToSpAi|db|resb)\\b"
 			}]
 		},
 		"comparisons": {
@@ -67,8 +67,8 @@
 		},
 		"comments": {
 			"patterns": [{
-				"name": "keyword.control",
-				"match": "\\b(;.*)\\b"
+				"name": "comment",
+				"match": "(;.*|section.*)$"
 			}]
 		},
 		"strings": {
