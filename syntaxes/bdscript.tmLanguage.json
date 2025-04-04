@@ -44,19 +44,19 @@
 		"controlflow": {
 			"patterns": [{
 				"name": "keyword.control",
-				"match": "\\b(jmp|jnz|jz|gosub|halt|exit|ret|gosub32)\\b"
+				"match": "\\b(jmp|jnz|jz|gosub|halt|exit|ret|gosub32|b|bnez|beqz|jal|jal32)\\b"
 			}]
 		},
 		"pushes": {
 			"patterns": [{
 				"name": "variable.other",
-				"match": "\\b(pushImm|pushFromPSp|pushFromPWp|pushFromPSpVal|pushFromPAi|pushFromFSp|pushFromFWp|pushFromFSpVal|pushFromFAi|popToSp|popToWp|popToSpVal|popToAi|memcpyToSp|memcpyToWp|memcpyToSpVal|memcpyToSpAi|db|resb)\\b"
-			}]
+				"match": "\\b(pushImm|pushImmf|pushFromPSp|pushFromPWp|pushFromPSpVal|pushFromPAi|pushFromFSp|pushFromFWp|pushFromFSpVal|pushFromFAi|popToSp|popToWp|popToSpVal|popToAi|memcpyToSp|memcpyToWp|memcpyToSpVal|memcpyToSpAi|db|resb|push|push.s|push.sp|push.wp|push.sp.d|push.bd|push.d.sp|push.d.wp|push.d.sp.d|push.b.bd|pop.sp|pop.wp|pop.sp.d|pop.bd|memcpy.sp|memcpy.wp|memcpy.sp.d|memcpy.bd)\\b"
+				}]
 		},
 		"comparisons": {
 			"patterns": [{
 				"name": "keyword.operator",
-				"match": "\\b(fetchValue|memcpy|cfti|neg|inv|eqz|abs|msb|info|eqz|neqz|msbi|ipos|citf|negf|absf|infzf|infoezf|eqzf|neqzf|supoezf|supzf|add|sub|mul|div|mod|and|or|xor|sll|sra|eqzv|neqzv|addf|subf|mulf|divf|modf|drop|dup|sin|cos|degr|radd)\\b"
+				"match": "\\b(push.d.pop|fetchValue|memcpy|cvt.s.w|cfti|neg|not|inv|seqz|eqz|abs|sltz|msb|slez|info|eqz|snez|neqz|sgez|msbi|sgtz|ipos|cvt.w.s|citf|neg.s|negf|abs.s|absf|sltz.s|infzf|slez.s|infoezf|seqz.s|eqzf|snez.s|neqzf|sgez.s|supoezf|sgtz.s|supzf|add|sub|mul|div|mod|and|or|xor|sll|sra|land|eqzv|lor|neqzv|add.s|addf|sub.s|subf|mul.s|mulf|div.s|divf|mod.s|modf|drop|dup|sin|cos|degr|radd)\\b"
 			}]
 		},
 		"syscall": {

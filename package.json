@@ -2,7 +2,8 @@
   "name": "bdscript",
   "displayName": "Bdscript Syntax",
   "description": "editor support for bdscript decompiled kh2 bdx ai scripts",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "publisher": "thundriokh",
   "engines": {
     "vscode": "^1.73.0"
   },
